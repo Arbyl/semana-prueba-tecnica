@@ -1,0 +1,23 @@
+.container{
+    height: 100px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+}
+
+.headerItem{
+    display: flex;
+    text-decoration: underline;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.headerItem:hover{
+    cursor: pointer;
+    background-color: rgb(39, 39, 39);
+}

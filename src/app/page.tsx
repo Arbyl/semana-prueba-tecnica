@@ -4,20 +4,12 @@ import axios from 'axios';
 import Link from 'next/link';
 import styles from '../styles/home.module.css';
 
-interface Post {
-  id: string;
-  image: string;
-  text: string;
-  title: string;
-  tags: string[];
-  views: number;
-}
-
 interface Recipe {
   id: string;
   name: string;
   tags: string[];
   image: string;
+  difficulty: string;
 }
 
 
@@ -40,11 +32,11 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Blog Posts</h1>
+      <h1>Recetas Semana </h1>
       <ul className={styles.postList}>
         {recipes.map((recipe) => (
           <li key={recipe.id} className={styles.postItem}>
-            <Link href={`/post/${recipe.id}`}>
+            <Link className={styles.recipeItem} href={`/recipes/${recipe.id}`}>
               <div className={styles.imgContainer}>
                 <img src={recipe.image} alt="" />
               </div>
@@ -56,6 +48,7 @@ const HomePage = () => {
                   </span>
                 ))}
               </div>
+              <div className={styles.dificultad}>Dificultad: {recipe.difficulty}</div>
             </Link>
           </li>
         ))}
