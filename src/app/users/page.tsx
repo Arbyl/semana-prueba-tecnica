@@ -54,10 +54,9 @@ const UsersPage = () => {
   }
 
   return (
-    console.log('user entrou'),
     <div className={styles.usersContainer}>
       
-      <h1>Users</h1>
+      <h1>Usuarios</h1>
       <ul className={styles.userList}>
         {users.map((user) => (
           <li key={user.id} className={styles.userItem}>

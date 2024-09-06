@@ -16,3 +16,25 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+.usersContainer{
+    padding: 150px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    ;
+}
+
+.userList{
+    list-style: none;
+}
+
+.userItem{
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
